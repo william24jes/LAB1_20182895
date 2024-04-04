@@ -1,19 +1,12 @@
 package com.example.lab1;
 
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Random;
 
@@ -28,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView telemathTextView = findViewById(R.id.Telemath);
-        calculatorLogo = findViewById(R.id.calculatorLogo);
+        calculatorLogo = findViewById(R.id.logoMenu);
         randomImages = getResources().obtainTypedArray(R.array.random_images);
 
         telemathTextView.setOnClickListener(new View.OnClickListener() {
