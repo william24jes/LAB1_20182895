@@ -315,6 +315,24 @@ public class Calculadora extends AppCompatActivity {
         textViewinput.setText(getVariable());
     }
 
+    public void signoIgual(View view) {
+        TextView textViewinput = findViewById(R.id.inputNumero);
+        TextView textviewIgual = findViewById(R.id.igualdad);
+        String variableActual = getVariable();
+
+        if (variableActual.contains("+")) {
+
+        } else if (variableActual.contains("-")) {
+
+        }else if (variableActual.contains("*")) {
+
+        }else if (variableActual.contains("/")) {
+
+        }
+
+        textViewinput.setText(getVariable());
+    }
+
 
     public String getVariable() {
         return variable;
