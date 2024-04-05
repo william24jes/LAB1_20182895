@@ -1,10 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <include
         android:id="@+id/include"
-        layout="@layout/barra_superior" />
+        layout="@layout/barra_superior"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/inputNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:text="0"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:text="0"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/siete"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="324dp"
+        android:onClick="numero7"
+        android:text="7"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cuatro"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:onClick="numero4"
+        android:text="4"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/siete" />
+
+    <Button
+        android:id="@+id/uno"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:onClick="numero1"
+        android:text="1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuatro" />
+
+    <Button
+        android:id="@+id/CLR"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="87dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="24dp"
+        android:text="CLR"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uno" />
+
+    <Button
+        android:id="@+id/dos"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:onClick="numero2"
+        android:text="2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cinco" />
+
+    <Button
+        android:id="@+id/cero"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:onClick="numero0"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dos" />
+
+    <Button
+        android:id="@+id/igualdad"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:text="="
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tres" />
+
+    <Button
+        android:id="@+id/tres"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:onClick="numero3"
+        android:text="3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seis" />
+
+    <Button
+        android:id="@+id/cinco"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:onClick="numero5"
+        android:text="5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ocho" />
+
+    <Button
+        android:id="@+id/seis"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:onClick="numero6"
+        android:text="6"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nueve" />
+
+    <Button
+        android:id="@+id/producto"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:onClick="signoProducto"
+        android:text="*"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/division" />
+
+    <Button
+        android:id="@+id/suma"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:onClick="signoSuma"
+        android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resta" />
+
+    <Button
+        android:id="@+id/resta"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:onClick="signoResta"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/producto" />
+
+    <Button
+        android:id="@+id/ocho"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="324dp"
+        android:onClick="numero8"
+        android:text="8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/include"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toEndOf="@+id/siete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nueve"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="324dp"
+        android:onClick="numero9"
+        android:text="9"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="@+id/include"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/division"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="324dp"
+        android:onClick="signoDivision"
+        android:text="/"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/include"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="@+id/include"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
