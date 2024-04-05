@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
-    tools:context=".MainActivity">
+    tools:context=".MenuPrincipal">
 
     <TextView
         android:id="@+id/Telemath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:clickable="false"
+        android:longClickable="true"
         android:text="Telemath"
         android:textSize="30sp"
         android:textStyle="normal"
-        android:longClickable="true"
         app:layout_constraintBottom_toTopOf="@+id/INDICACIONES"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -30,20 +31,21 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bienvenido" />
+        app:layout_constraintTop_toBottomOf="@+id/indicaciones_indicaciones_layout" />
 
     <TextView
-        android:id="@+id/Lab2"
+        android:id="@+id/barraSuperior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
+        android:layout_height="70dp"
+        android:background="#C3196D87"
         android:gravity="center"
         android:text="Lab2-AppsIoT"
+        android:textColor="#020202"
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Bienvenido"
+        android:id="@+id/indicaciones_indicaciones_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
@@ -53,13 +55,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Lab2" />
+        app:layout_constraintTop_toBottomOf="@+id/barraSuperior" />
 
     <Button
         android:id="@+id/INDICACIONES"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="36dp"
+        android:clickable="false"
+        android:onClick="irAVentana2"
         android:text="INDICACIONES"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/CALCULAR"
@@ -71,6 +75,7 @@
         android:layout_width="300dp"
         android:layout_height="57dp"
         android:layout_marginBottom="40dp"
+        android:onClick="irACalculadora"
         android:text="CALCULAR"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
